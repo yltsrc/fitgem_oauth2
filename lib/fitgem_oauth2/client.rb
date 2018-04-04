@@ -94,6 +94,7 @@ module FitgemOauth2
           404 => lambda { raise FitgemOauth2::NotFoundError },
           405 => lambda { raise FitgemOauth2::NotAllowedError },
           409 => lambda { raise FitgemOauth2::ConflictError },
+          429 => lambda { raise FitgemOauth2::RateLimitError },
           500..599 => lambda { raise FitgemOauth2::ServerError }
       }
 

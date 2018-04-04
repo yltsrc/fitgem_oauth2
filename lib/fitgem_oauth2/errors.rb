@@ -3,7 +3,6 @@ module FitgemOauth2
   end
 
   class InvalidTimeArgument < ArgumentError
-
   end
 
   class InvalidArgumentError < ArgumentError
@@ -26,6 +25,9 @@ module FitgemOauth2
   end
 
   class ConflictError < StandardError
+  end
+
+  class RateLimitError < StandardError
   end
 
   class ServerError < StandardError
